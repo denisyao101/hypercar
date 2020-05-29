@@ -1,0 +1,9 @@
+<h1> MENU </h1>
+
+<ul>
+    {% for item in menu %}
+    <li>
+        <a href="{{item.link}}"> {{item.text}}</a>
+    </li>
+    {% endfor %}
+</ul>

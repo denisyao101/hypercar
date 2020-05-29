@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Page</title>
+</head>
+<body>
+<div>Change oil queue: {{ clients_line.oil|length }}</div>
+<div>Inflate tires queue: {{ clients_line.tires|length }}</div>
+<div>Get diagnostic queue: {{ clients_line.diagnostics|length }}</div>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Process next</button>
+</form>
+</body>
+</html>
